@@ -20,5 +20,11 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
+
+        private void OnNavigateButtonClicked(object sender, EventArgs e)
+        {
+            // Navigate to the new screen when the button is clicked
+            Navigation.PushAsync(new NewScreenPage());
+        }
     }
 }

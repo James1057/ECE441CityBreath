@@ -35,6 +35,8 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
+            <Button Text="Go to New Screen" Clicked="OnNavigateButtonClicked" />
+
         </VerticalStackLayout>
     </ScrollView>
 
