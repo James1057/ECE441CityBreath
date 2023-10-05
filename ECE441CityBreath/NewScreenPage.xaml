@@ -17,7 +17,17 @@
                 HorizontalOptions="Center" />
 
             <Button Text="Go to New Screen" Clicked="OnNavigateButtonClicked1" />
-                
+
+            <Entry x:Name="entry"
+                Placeholder="Enter text"
+                TextChanged="OnEntryTextChanged"
+                Completed="OnEntryCompleted" />
+
+            <Label x:Name ="myLabel" />
+
+
+            
+            
         </VerticalStackLayout>
     </ScrollView>
 
