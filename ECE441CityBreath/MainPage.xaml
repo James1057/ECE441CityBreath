@@ -1,14 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ECE441CityBreath.MainPage">
+             x:Class="ECE441CityBreath.MainPage"
+             BackgroundColor="WhiteSmoke"
+             >
+    
 
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
-            VerticalOptions="Center">
+            VerticalOptions="Center"
+            WidthRequest="500"
+            >
 
+            <Label
+                Text="Home Page"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Description"
+                FontSize="40"
+                HorizontalOptions="Center" 
+                TextColor="Black"/>
+            
             <Image
                 Source="dotnet_bot.png"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
@@ -16,26 +29,38 @@
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Hello, World!"
+                Text="City Breath: ECE441"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" 
+                TextColor="Black"/>
 
             <Label
-                Text="Welcome to .NET Multi-platform App UI"
+                Text="Advanced Robotic Surveillance for Urban Air Quality Safety"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                SemanticProperties.Description="Description"
                 FontSize="18"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" 
+                TextColor="Black"/>
+            
+            
 
             <Button
                 x:Name="CounterBtn"
                 Text="Click me"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+                WidthRequest="500"
+                HorizontalOptions="Center" 
+                TextColor="Black"
+                FontAttributes="Bold"/>
 
-            <Button Text="Go to New Screen" Clicked="OnNavigateButtonClicked" />
+            <Button 
+                Text="Go to New Screen" 
+                Clicked="OnNavigateButtonClicked" 
+                WidthRequest="500"
+                TextColor="Black"
+                FontAttributes="Bold"/>
 
         </VerticalStackLayout>
     </ScrollView>

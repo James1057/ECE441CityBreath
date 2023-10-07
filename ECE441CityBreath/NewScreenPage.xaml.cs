@@ -10,13 +10,23 @@ namespace ECE441CityBreath
         }
        
 
-        void OnEntryTextChanged(object sender, TextChangedEventArgs e)
+        void OnEntryTextChangedUsername(object sender, TextChangedEventArgs e)
         {
             string oldText = e.OldTextValue;
             string newText = e.NewTextValue;
-            string myText = entry.Text;
+            string myText = entryUserName.Text;
 
-            myLabel.Text = myText;
+            myUserName.Text = myText;
+
+        }
+
+        void OnEntryTextChangedPassword(object sender, TextChangedEventArgs e)
+        {
+            string oldText = e.OldTextValue;
+            string newText = e.NewTextValue;
+            string myText = entryPassword.Text;
+
+            myPassword.Text = myText;
 
         }
 

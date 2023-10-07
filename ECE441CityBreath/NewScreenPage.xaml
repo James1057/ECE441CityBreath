@@ -2,13 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ECE441CityBreath.NewScreenPage"
-            BackgroundColor="Green">
+             BackgroundColor="WhiteSmoke">
 
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
-            VerticalOptions="Center">
+            VerticalOptions="Center"
+            WidthRequest="500"
+            >
 
             <Image
                 Source="dotnet_bot.png"
@@ -18,12 +20,41 @@
 
             <Button Text="Go to New Screen" Clicked="OnNavigateButtonClicked1" />
 
-            <Entry x:Name="entry"
-                Placeholder="Enter text"
-                TextChanged="OnEntryTextChanged"
-                Completed="OnEntryCompleted" />
+            <Entry 
+                x:Name="entryUserName"
+                Placeholder="Enter Username"
+                TextChanged="OnEntryTextChangedUsername"
+                Completed="OnEntryCompleted" 
+                BackgroundColor="White"
+                TextColor="Black"
+                HeightRequest="40"/>
 
-            <Label x:Name ="myLabel" />
+            <Entry 
+                x:Name="entryPassword"
+                Placeholder="Enter Password"
+                IsPassword="True"
+                TextChanged="OnEntryTextChangedPassword"
+                Completed="OnEntryCompleted" 
+                BackgroundColor="White"
+                TextColor="Black"
+                HeightRequest="40"/>
+
+            <Label 
+                x:Name ="myUserName" 
+                BackgroundColor="White"
+                HeightRequest="40"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                TextColor="Black"
+                />
+            <Label 
+                x:Name ="myPassword" 
+                BackgroundColor="White"
+                HeightRequest="40"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                TextColor="Black"
+                />
 
 
             
