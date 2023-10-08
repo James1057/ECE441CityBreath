@@ -9,22 +9,17 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
-        }
-
         private void OnNavigateButtonClicked(object sender, EventArgs e)
         {
             // Navigate to the new screen when the button is clicked
             Navigation.PushAsync(new NewScreenPage());
         }
+
+        private void QuitApplication(object sender, EventArgs e)
+        {
+            Application.Current.Quit();
+        }
+
+
     }
 }

@@ -9,8 +9,16 @@
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center"
-            WidthRequest="500"
+            WidthRequest="400"
             >
+
+            <Label
+                Text="Login Page"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Description"
+                FontSize="40"
+                HorizontalOptions="Center" 
+                TextColor="Black"/>
 
             <Image
                 Source="dotnet_bot.png"
@@ -18,7 +26,11 @@
                 HeightRequest="200"
                 HorizontalOptions="Center" />
 
-            <Button Text="Go to New Screen" Clicked="OnNavigateButtonClicked1" />
+            <Button 
+                Text="Home Page" 
+                Clicked="OnNavigateButtonClicked1" 
+                TextColor="Black"
+                FontAttributes="Bold"/>
 
             <Entry 
                 x:Name="entryUserName"

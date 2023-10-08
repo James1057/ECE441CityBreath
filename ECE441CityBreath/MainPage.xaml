@@ -8,11 +8,10 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
+            Spacing="10"
             Padding="30,0"
             VerticalOptions="Center"
-            WidthRequest="500"
-            >
+            WidthRequest="400" >
 
             <Label
                 Text="Home Page"
@@ -23,15 +22,17 @@
                 TextColor="Black"/>
             
             <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
+                Source="logo_main.png"
+                SemanticProperties.Description="Cute dog robot bot waving hi to you!"
+                HeightRequest="250"
                 HorizontalOptions="Center" />
 
             <Label
                 Text="City Breath: ECE441"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
                 HorizontalOptions="Center" 
                 TextColor="Black"/>
 
@@ -40,25 +41,22 @@
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Description"
                 FontSize="18"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
                 HorizontalOptions="Center" 
                 TextColor="Black"/>
-            
-            
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                WidthRequest="500"
-                HorizontalOptions="Center" 
+            <Button 
+                Text="Login Page" 
+                Clicked="OnNavigateButtonClicked" 
+                WidthRequest="400"
                 TextColor="Black"
                 FontAttributes="Bold"/>
 
             <Button 
-                Text="Go to New Screen" 
-                Clicked="OnNavigateButtonClicked" 
-                WidthRequest="500"
+                Text="Quit Application" 
+                Clicked="QuitApplication" 
+                WidthRequest="400"
                 TextColor="Black"
                 FontAttributes="Bold"/>
 
