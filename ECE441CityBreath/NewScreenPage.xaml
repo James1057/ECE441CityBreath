@@ -32,6 +32,12 @@
                 TextColor="Black"
                 FontAttributes="Bold"/>
 
+            <Button 
+                Text="Login" 
+                Clicked="OnNavigateButtonClickedLogin" 
+                TextColor="Black"
+                FontAttributes="Bold"/>
+
             <Entry 
                 x:Name="entryUserName"
                 Placeholder="Enter Username"
@@ -51,22 +57,6 @@
                 TextColor="Black"
                 HeightRequest="40"/>
 
-            <Label 
-                x:Name ="myUserName" 
-                BackgroundColor="White"
-                HeightRequest="40"
-                HorizontalTextAlignment="Center"
-                VerticalTextAlignment="Center"
-                TextColor="Black"
-                />
-            <Label 
-                x:Name ="myPassword" 
-                BackgroundColor="White"
-                HeightRequest="40"
-                HorizontalTextAlignment="Center"
-                VerticalTextAlignment="Center"
-                TextColor="Black"
-                />
 
 
             
