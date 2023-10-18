@@ -60,6 +60,16 @@
                 TextColor="Black"
                 FontAttributes="Bold"/>
 
+            <Button 
+                Text="Dashboard" 
+                Clicked="NavigateToDashboard" 
+                WidthRequest="400"
+                TextColor="Black"
+                FontAttributes="Bold"/>
+
+
+
+
         </VerticalStackLayout>
     </ScrollView>
 

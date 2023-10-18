@@ -13,7 +13,14 @@
         {
             // Navigate to the new screen when the button is clicked
             Navigation.PushAsync(new NewScreenPage());
+
         }
+
+        private void NavigateToDashboard(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new DashboardPage());
+        }
+
 
         private void QuitApplication(object sender, EventArgs e)
         {

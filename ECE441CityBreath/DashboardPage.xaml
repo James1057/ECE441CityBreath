@@ -1,0 +1,31 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ECE441CityBreath.DashboardPage"
+             BackgroundColor="WhiteSmoke">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="30,0" VerticalOptions="Center" WidthRequest="400">
+            <Label Text="Dashboard" FontSize="40" HorizontalOptions="Center" TextColor="Black" />
+
+            <Button Text="Robot Controller Page"
+                    Clicked="NavigateToRobotControllerPage"
+                    WidthRequest="400"
+                    TextColor="Black"
+                    FontAttributes="Bold" />
+
+            <Button Text="Raw Data Page"
+                    Clicked="NavigateToRawDataPage"
+                    WidthRequest="400"
+                    TextColor="Black"
+                    FontAttributes="Bold" />
+
+            <Button Text="Cleaned Data Page"
+                    Clicked="NavigateToCleanedDataPage"
+                    WidthRequest="400"
+                    TextColor="Black"
+                    FontAttributes="Bold" />
+
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
