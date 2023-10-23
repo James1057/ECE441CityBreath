@@ -10,7 +10,7 @@ namespace ECE441CityBreath
         private void NavigateToRobotControllerPage(object sender, EventArgs e)
         {
             // Navigate to the Robot Controller screen when the button is clicked
-            Console.WriteLine("Navigating to Robot Controller Page"); // TODO: Replace with actual navigation
+            Navigation.PushAsync(new RobotControllerPage());
         }
 
         private void NavigateToRawDataPage(object sender, EventArgs e)

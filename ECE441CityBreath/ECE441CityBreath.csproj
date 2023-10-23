@@ -81,6 +81,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="Images\**" />
+	  <AndroidResource Remove="NewFolder\**" />
+	  <Compile Remove="Images\**" />
+	  <Compile Remove="NewFolder\**" />
+	  <EmbeddedResource Remove="Images\**" />
+	  <EmbeddedResource Remove="NewFolder\**" />
+	  <MauiCss Remove="Images\**" />
+	  <MauiCss Remove="NewFolder\**" />
+	  <MauiXaml Remove="Images\**" />
+	  <MauiXaml Remove="NewFolder\**" />
+	  <None Remove="Images\**" />
+	  <None Remove="NewFolder\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Remove="Dashboard.xaml" />
 	</ItemGroup>
 
@@ -98,6 +113,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="NewScreenPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="RobotControllerInterface.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
