@@ -16,13 +16,13 @@ namespace ECE441CityBreath
         private void NavigateToRawDataPage(object sender, EventArgs e)
         {
             // Navigate to the Raw Data screen when the button is clicked
-            Console.WriteLine("Navigating to Raw Data Page"); // TODO: Replace with actual navigation
+            Navigation.PushAsync(new RawDataPage()); 
         }
 
         private void NavigateToCleanedDataPage(object sender, EventArgs e)
         {
             // Navigate to the Cleaned Data screen when the button is clicked
-            Console.WriteLine("Navigating to Cleaned Data Page"); // TODO: Replace with actual navigation
+            Navigation.PushAsync(new CleanedDataPage()); 
         }
     }
 }

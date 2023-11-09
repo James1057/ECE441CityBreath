@@ -100,7 +100,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\cleaneddatapage.png" />
 	  <None Remove="Resources\Images\logo_main.PNG" />
+	  <None Remove="Resources\Images\rawdatapage.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -109,10 +111,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="CleanedDataPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="DashboardPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="NewScreenPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="RawDataPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="RobotControllerInterface.xaml">

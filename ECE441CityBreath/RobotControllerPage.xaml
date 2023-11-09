@@ -34,7 +34,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
+            
+            <!-- have to get beter images -->
             <Image Grid.Row="0" Grid.Column="1" Source="arrow_up.png"/>
             <Image Grid.Row="1" Grid.Column="0" Source="arrow_left.png"/>
             <Image Grid.Row="1" Grid.Column="2" Source="arrow_right.png"/>

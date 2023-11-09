@@ -7,7 +7,7 @@
         <VerticalStackLayout Spacing="10" Padding="30,0" VerticalOptions="Center" WidthRequest="400">
             <Label Text="Dashboard" FontSize="40" HorizontalOptions="Center" TextColor="Black" />
 
-            <Button Text="Robot Controller Page"
+           <Button Text="Robot Controller Page"
                     Clicked="NavigateToRobotControllerPage"
                     WidthRequest="400"
                     TextColor="Black"
