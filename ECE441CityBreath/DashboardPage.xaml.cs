@@ -1,3 +1,7 @@
+using System.Diagnostics;
+using System;
+using Microsoft.Maui.Controls;
+
 namespace ECE441CityBreath
 {
     public partial class DashboardPage : ContentPage
@@ -16,7 +20,17 @@ namespace ECE441CityBreath
         private void NavigateToRawDataPage(object sender, EventArgs e)
         {
             // Navigate to the Raw Data screen when the button is clicked
-            Navigation.PushAsync(new RawDataPage()); 
+            //Navigation.PushAsync(new RawDataPage()); 
+            try
+            {
+                string exeFilePath = @"C:\FilesForProject\RawDataTable.exe"; // Replace with the actual path to your .exe file
+                Process.Start(exeFilePath);
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that may occur when starting the process
+                Console.WriteLine($"Error: {ex.Message}");
+            }
         }
 
         private void NavigateToCleanedDataPage(object sender, EventArgs e)
