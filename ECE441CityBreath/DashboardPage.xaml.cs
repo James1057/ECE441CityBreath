@@ -23,12 +23,13 @@ namespace ECE441CityBreath
             //Navigation.PushAsync(new RawDataPage()); 
             try
             {
-                string exeFilePath = @"C:\FilesForProject\RawDataTable.exe"; // Replace with the actual path to your .exe file
+                string exeFileName = "RawDataTable.exe";
+                string exeFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "Scripts", exeFileName);
                 Process.Start(exeFilePath);
             }
             catch (Exception ex)
             {
-                // Handle any exceptions that may occur when starting the process
+                // Handle exceptions
                 Console.WriteLine($"Error: {ex.Message}");
             }
         }
@@ -36,7 +37,17 @@ namespace ECE441CityBreath
         private void NavigateToCleanedDataPage(object sender, EventArgs e)
         {
             // Navigate to the Cleaned Data screen when the button is clicked
-            Navigation.PushAsync(new CleanedDataPage()); 
+            try
+            {
+                string exeFileName = "CleanedData.exe";
+                string exeFilePath1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "Scripts", exeFileName);
+                Process.Start(exeFilePath1);
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                Console.WriteLine($"Error: {ex.Message}");
+            }
         }
     }
 }

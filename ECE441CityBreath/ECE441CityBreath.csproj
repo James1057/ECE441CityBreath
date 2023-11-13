@@ -103,6 +103,17 @@
 	  <None Remove="Resources\Images\cleaneddatapage.png" />
 	  <None Remove="Resources\Images\logo_main.PNG" />
 	  <None Remove="Resources\Images\rawdatapage.png" />
+	  <None Remove="Resources\Scripts\CleanedData.exe" />
+	  <None Remove="Resources\Scripts\RawDataTable.exe" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Resources\Scripts\CleanedData.exe">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Resources\Scripts\RawDataTable.exe">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
 	</ItemGroup>
 
 	<ItemGroup>
