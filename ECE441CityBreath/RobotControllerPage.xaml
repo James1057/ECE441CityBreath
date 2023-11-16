@@ -50,6 +50,8 @@
              
             <!-- Down Button -->
             <Button Grid.Row="0" Grid.Column="2" Pressed="OnQuit" Text="Quit" ></Button>
+            <!-- Down Button -->
+            <Button Grid.Row="0" Grid.Column="0" Pressed="OnStand" Text="Stand" ></Button>
         </Grid>
 
 

@@ -64,6 +64,13 @@ namespace ECE441CityBreath
             TransmitData(DBUtils.GetIP(), DBUtils.GetPort(), "q");
         }
 
+        private void OnStand(object sender, EventArgs e)
+        {
+            // Open the menu
+            // Set the IP address and port to connect to
+            TransmitData(DBUtils.GetIP(), DBUtils.GetPort(), "e");
+        }
+
         static void TransmitData(string ipAddress, int port, string data, bool closeConnection = true)
         {
             TcpClient tcpClient = null;
