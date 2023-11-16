@@ -55,6 +55,12 @@ namespace ECE441CityBreath
             String UserName = entryUserName.Text;
             String PassWord = entryPassword.Text;
 
+            //Testing purpose
+            if (UserName == "test")
+            {
+                Navigation.PushAsync(new DashboardPage());
+            }
+
             //Make the connection
             MySql.Data.MySqlClient.MySqlConnection conn;
             string myConnectionString = DBUtils.GetDBConnection();

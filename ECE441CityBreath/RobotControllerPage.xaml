@@ -36,10 +36,20 @@
             </Grid.ColumnDefinitions>
             
             <!-- have to get beter images -->
-            <Image Grid.Row="0" Grid.Column="1" Source="arrow_up.png"/>
-            <Image Grid.Row="1" Grid.Column="0" Source="arrow_left.png"/>
-            <Image Grid.Row="1" Grid.Column="2" Source="arrow_right.png"/>
-            <Image Grid.Row="1" Grid.Column="1" Source="arrow_down.png"/>
+            <!-- Up Button -->
+            <Button Grid.Row="0" Grid.Column="1" Pressed="OnForward" Text="↑" > </Button>
+
+            <!-- Left Button -->
+            <Button Grid.Row="1" Grid.Column="0" Pressed="OnLeft" Text="←" > </Button>
+
+            <!-- Right Button -->
+            <Button Grid.Row="1" Grid.Column="2" Pressed="OnRight" Text="→" > </Button>
+
+            <!-- Down Button -->
+            <Button Grid.Row="1" Grid.Column="1" Pressed="OnBackward" Text="↓" > </Button>
+             
+            <!-- Down Button -->
+            <Button Grid.Row="0" Grid.Column="2" Pressed="OnQuit" Text="Quit" ></Button>
         </Grid>
 
 
