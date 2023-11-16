@@ -50,7 +50,7 @@ class MySQLTableViewer:
 
     def normalize_sensor_data(self, data):
         # Create DataFrame from the data
-        df = pd.DataFrame(data, columns=['HostName_datatimeStart','Hostname','datetime', 'AirSensor1', 'AirSensor2', 'AirSensor3', 'AirSensor4', 'AirSensor5', 'AirSensor6','latitude','longitude','altitude'])
+        df = pd.DataFrame(data, columns=['HostName_datetimeStart','Hostname','datetime', 'AirSensor1', 'AirSensor2', 'AirSensor3', 'AirSensor4', 'AirSensor5', 'AirSensor6','latitude','longitude','altitude'])
 
         # Define boundaries for normalization
         boundaries = {
@@ -134,27 +134,43 @@ class MySQLTableViewer:
         plt.show()
 
 
-# ... (Keep the rest of the MySQLTableViewer class and the main function as is)
-
-
-
-# ... (other parts of your class)
-
     def fetch_and_display(self):
-    # Fetch data from the database
+        # Fetch data from the database
         data, columns = self.execute_query()
 
         # Create DataFrame from the data
         df = pd.DataFrame(data, columns=columns)
 
-        # Normalize sensor data if required columns are present in the DataFrame
-        if set(['AirSensor1', 'AirSensor2', 'AirSensor3', 'AirSensor4', 'AirSensor5', 'AirSensor6']).issubset(df.columns):
-            normalized_df = self.normalize_sensor_data(df)
+        # Store the DataFrame in the class for later use
+        self.full_df = df
 
-            # Display the latest run histogram
-            self.display_latest_run(normalized_df)
+        # Get unique HostName_datatimeStart values and ensure they are strings
+        runs = [str(run) for run in df['HostName_datetimeStart'].unique()]
 
-# ... (rest of the class and main function)
+        # Create a dropdown for selecting the run to display
+        self.run_var = tk.StringVar()
+        run_dropdown = ttk.Combobox(self.root, textvariable=self.run_var, values=runs)
+        run_dropdown.pack()
+        run_dropdown.bind("<<ComboboxSelected>>", self.on_run_selected)
+
+
+    def on_run_selected(self, event):
+        try:
+            # Get the selected run as a string
+            selected_run = self.run_var.get()
+
+            # Filter the DataFrame for the selected run
+            run_df = self.full_df[self.full_df['HostName_datetimeStart'].astype(str) == selected_run]
+
+            # If there is data for the selected run, display it
+            if not run_df.empty:
+                normalized_run_df = self.normalize_sensor_data(run_df)
+                self.display_latest_run(normalized_run_df)
+            else:
+                print("No data found for the selected run.")  # Debug print
+        except Exception as e:
+            print(f"Error occurred: {e}")  # Print out the exception if one occurs
+
 
 
 def main():
@@ -174,3 +190,6 @@ if __name__ == "__main__":
     main() 
 
 # ... (Keep the main function and the if __name__ == "__main__": part as is)
+
+    
+

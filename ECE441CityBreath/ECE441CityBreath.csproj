@@ -83,16 +83,22 @@
 	<ItemGroup>
 	  <AndroidResource Remove="Images\**" />
 	  <AndroidResource Remove="NewFolder\**" />
+	  <AndroidResource Remove="Resources\Scripts\build\**" />
 	  <Compile Remove="Images\**" />
 	  <Compile Remove="NewFolder\**" />
+	  <Compile Remove="Resources\Scripts\build\**" />
 	  <EmbeddedResource Remove="Images\**" />
 	  <EmbeddedResource Remove="NewFolder\**" />
+	  <EmbeddedResource Remove="Resources\Scripts\build\**" />
 	  <MauiCss Remove="Images\**" />
 	  <MauiCss Remove="NewFolder\**" />
+	  <MauiCss Remove="Resources\Scripts\build\**" />
 	  <MauiXaml Remove="Images\**" />
 	  <MauiXaml Remove="NewFolder\**" />
+	  <MauiXaml Remove="Resources\Scripts\build\**" />
 	  <None Remove="Images\**" />
 	  <None Remove="NewFolder\**" />
+	  <None Remove="Resources\Scripts\build\**" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -104,7 +110,9 @@
 	  <None Remove="Resources\Images\logo_main.PNG" />
 	  <None Remove="Resources\Images\rawdatapage.png" />
 	  <None Remove="Resources\Scripts\CleanedData.exe" />
+	  <None Remove="Resources\Scripts\CleanedData.spec" />
 	  <None Remove="Resources\Scripts\RawDataTable.exe" />
+	  <None Remove="Resources\SensorScript\PLACEHOLDER.py" />
 	</ItemGroup>
 
 	<ItemGroup>
