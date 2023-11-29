@@ -36,18 +36,9 @@ namespace ECE441CityBreath
 
         private void NavigateToCleanedDataPage(object sender, EventArgs e)
         {
-            // Navigate to the Cleaned Data screen when the button is clicked
-            try
-            {
-                string exeFileName = "CleanedData.exe";
-                string exeFilePath1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "Scripts", exeFileName);
-                Process.Start(exeFilePath1);
-            }
-            catch (Exception ex)
-            {
-                // Handle exceptions
-                Console.WriteLine($"Error: {ex.Message}");
-            }
+            // Navigate to the Cleaned Data Page screen when the button is clicked
+            Navigation.PushAsync(new CleanedDataPage());
+
         }
-    }
+    }    
 }

@@ -111,12 +111,16 @@
 	  <None Remove="Resources\Images\rawdatapage.png" />
 	  <None Remove="Resources\Scripts\CleanedData.exe" />
 	  <None Remove="Resources\Scripts\CleanedData.spec" />
+	  <None Remove="Resources\Scripts\Lineplots.exe" />
 	  <None Remove="Resources\Scripts\RawDataTable.exe" />
 	  <None Remove="Resources\SensorScript\PLACEHOLDER.py" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Content Include="Resources\Scripts\CleanedData.exe">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Resources\Scripts\Lineplots.exe">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Content>
 	  <Content Include="Resources\Scripts\RawDataTable.exe">
@@ -137,9 +141,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="NewScreenPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="RawDataPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="RobotControllerInterface.xaml">
