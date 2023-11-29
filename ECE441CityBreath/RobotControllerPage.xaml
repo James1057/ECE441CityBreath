@@ -10,7 +10,9 @@
         </Grid.GestureRecognizers>
 
         <!-- Live Camera Feed Placeholder -->
-        <Image Source="robot_pov.png" Aspect="AspectFill" />
+        <!-- <Image Source="robot_pov.png" Aspect="AspectFill" /> -->
+        <!-- WebView to display the website -->
+        <WebView x:Name="webView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0"/>
 
         <!-- Hamburger Button -->
         <Button x:Name="HamburgerButton" Text="≡" VerticalOptions="Start" HorizontalOptions="Start" Clicked="OnHamburgerButtonClicked"/>
